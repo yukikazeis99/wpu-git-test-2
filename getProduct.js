@@ -55,3 +55,32 @@ xlsDocument.Write('B' + row, 'Test Case');
 xlsDocument.Write('C' + row, 'Result');
 xlsDocument.Write('D' + row, 'Note');
 row++;
+
+//===============================Global function Starts here======================================
+
+function screenShotPHD(bahasa){
+    mkdir("ScreenshotPHD");
+    mkdir("ScreenshotPHD/"+folderS)
+    Log('Capturing Picture in progress . . . ');
+    Sleep(sleepTime);
+    var tanggal = new Date();
+    var getItem = GetValue2('GeneralInfo').value; 
+    var nama = tanggal.getFullYear() + '-'
+        nama += ("0" + (tanggal.getMonth() + 1)).slice(-2) + '-'
+        nama += ("0" + tanggal.getDate()).slice(-2) + '-'
+        nama += ("0" + tanggal.getHours()).slice(-2) + '-'
+        nama += ("0" + tanggal.getMinutes()).slice(-2) + '-'
+        nama += ("0" + tanggal.getSeconds()).slice(-2) + '-'
+        //==================JO2 PHD TEAM========================
+        nama += getItem["deviceModel"]
+        //==================JO2 PHD TEAM========================
+        nama += ' '
+        if(bahasa != undefined){
+            nama += bahasa
+        }
+        nama += '.png';
+        ni.Screenshot('ScreenshotPHD/'+folderS+"/"+ nama);
+        Log('Screen Captured !!!!');
+}
+
+//====
