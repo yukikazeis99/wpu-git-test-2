@@ -803,7 +803,6 @@ function tycoonMenu(){
          "_____________________________________________________________________________________________" +
          "\n");
     Sleep(3000);
-    //if (jo2.specific('tycoon_tasks.bgin') != undefined){
      if (jo2.specific('btn_pay0') != undefined){
             jo2.regularTap('btn_close_task')
             gui.update()
@@ -848,8 +847,7 @@ function backKeyrun(){
 
 //===============================end of global function===========================================
 
-//For LOC test : Please change ChangeLanguage("XX") with "EN" , "FR" ,  "ES" . "IT" , "DE" , "BR" , "SP_LATAM" ,
-// "RU" , "TR" , "TH" , "VI" , "PL" , "AR", "ID"
+
 ChangeLanguage("EN"); 
 backKeyrun();
 
